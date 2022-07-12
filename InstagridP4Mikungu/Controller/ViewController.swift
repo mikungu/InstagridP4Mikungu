@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         super.viewDidLoad()
             swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(nextSwipeGesture(recognizer:)))
             self.centralViewLayout.addGestureRecognizer(swipeGesture)
-            if UIDevice.current.orientation == .landscapeLeft {
+            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
                 swipeGesture.direction = .left
             } else {
                 swipeGesture.direction = .up
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         let screenHeight = UIScreen.main.bounds.height
         let screenWidth = UIScreen.main.bounds.width
         var translationTransform : CGAffineTransform
-        if UIDevice.current.orientation == .landscapeLeft {
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
            translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
         } else {
             translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
