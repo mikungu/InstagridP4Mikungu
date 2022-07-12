@@ -78,9 +78,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     @objc func nextSwipeGesture (recognizer: UISwipeGestureRecognizer) {
-        
+        animationView()
+        share()
     }
     
+    private func animationView () {
+        let screenHeight = UIScreen.main.bounds.height
+        let screenWidth = UIScreen.main.bounds.width
+        var translationTransform : CGAffineTransform
+        if UIDevice.current.orientation == .landscapeLeft {
+           translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+        } else {
+            translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.centralViewLayout.transform = translationTransform
+        }
+    }
+    
+    private func share () {
+        let renderer = UIGraphicsImageRenderer(size: centralViewLayout.bounds.size)
+        let screenshot = renderer.image {
+            _ in centralViewLayout.drawHierarchy(in: centralViewLayout.bounds, afterScreenUpdates: true)
+        }
+        let activityController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+        present(activityController, animated: true)
+        activityController.completionWithItemsHandler = { (_, _, _, _) in UIView.animate(withDuration: 0.3) { self.centralViewLayout.transform = .identity}
+        }
+    }
+                                                
     
 }
 
