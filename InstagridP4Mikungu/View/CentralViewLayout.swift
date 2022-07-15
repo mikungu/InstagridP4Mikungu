@@ -9,10 +9,13 @@ import UIKit
 
 class CentralViewLayout: UIView {
 
-   @IBOutlet private var addTopLeftButton: UIButton!
-   @IBOutlet private var addTopRightButton: UIButton!
-   @IBOutlet private var addBottomLeftButton: UIButton!
-   @IBOutlet private var addBottomRightButton: UIButton!
+
+    @IBOutlet private var addTopLeftButton : UIButton!
+    @IBOutlet private var addTopRightButton : UIButton!
+    @IBOutlet private var addBottomLeftButton : UIButton!
+    @IBOutlet private var addBottomRightButton : UIButton!
+    
+    
 
     enum Style {
         case wideTop, wideBottom, fourSquare

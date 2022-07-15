@@ -31,9 +31,6 @@
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tapButtonLayout1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppB-fk-ECz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWt-TG-siQ" userLabel="Layout 2">
                                         <rect key="frame" x="135" y="0.0" width="81" height="81"/>
@@ -47,9 +44,6 @@
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tapButtonLayout2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgk-m6-g4W"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0p-Ob-1Vi" userLabel="Layout 3">
                                         <rect key="frame" x="270" y="0.0" width="81" height="81"/>
@@ -63,9 +57,6 @@
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tapButtonLayout3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWE-bG-Wc2"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,9 +78,6 @@
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ru-Uy-sWC"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-Ao-ZAe" userLabel="AddTopRightButton">
                                                 <rect key="frame" x="136" y="0.0" width="110" height="110"/>
@@ -103,9 +91,6 @@
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSb-Y8-Po6"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -124,9 +109,6 @@
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBR-5c-Osb"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igo-1J-qOL" userLabel="AddBottomRightButton">
                                                 <rect key="frame" x="136" y="0.0" width="110" height="110"/>
@@ -140,9 +122,6 @@
                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fq-2s-wvE"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -158,12 +137,6 @@
                                     <constraint firstAttribute="bottom" secondItem="XQu-Re-J6A" secondAttribute="bottom" constant="27" id="oLf-MY-Rgo"/>
                                     <constraint firstAttribute="trailing" secondItem="XQu-Re-J6A" secondAttribute="trailing" constant="27" id="wCh-vx-cIu"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="addBottomLeftButton" destination="ybl-PW-UTe" id="05d-hS-n3y"/>
-                                    <outlet property="addBottomRightButton" destination="Igo-1J-qOL" id="BAW-uI-hRy"/>
-                                    <outlet property="addTopLeftButton" destination="7r9-lu-Hn3" id="cP1-DG-2Vb"/>
-                                    <outlet property="addTopRightButton" destination="QtA-Ao-ZAe" id="cSq-tW-qSn"/>
-                                </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="e4C-np-2tk" userLabel="Swipe View">
                                 <rect key="frame" x="139" y="115.66666666666667" width="136" height="59.333333333333329"/>
@@ -204,20 +177,6 @@
                             <constraint firstItem="Kxx-AT-1hn" firstAttribute="top" secondItem="e4C-np-2tk" secondAttribute="bottom" constant="20" id="yTA-Kg-uX3"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="arrowUp" destination="buq-HJ-uL3" id="ctE-A8-cIb"/>
-                        <outlet property="centralViewLayout" destination="Kxx-AT-1hn" id="usB-0M-Cxg"/>
-                        <outlet property="swipeText" destination="ghC-Oo-8Ba" id="qBu-rG-hNG"/>
-                        <outletCollection property="layouts" destination="gVC-2F-rfl" collectionClass="NSMutableArray" id="73w-iJ-v01"/>
-                        <outletCollection property="layouts" destination="gVC-2F-rfl" collectionClass="NSMutableArray" id="MN6-ru-aUh"/>
-                        <outletCollection property="layouts" destination="gVC-2F-rfl" collectionClass="NSMutableArray" id="OxR-R7-1Im"/>
-                        <outletCollection property="layouts" destination="JWt-TG-siQ" collectionClass="NSMutableArray" id="car-g4-0zF"/>
-                        <outletCollection property="layouts" destination="F0p-Ob-1Vi" collectionClass="NSMutableArray" id="xy4-jd-aGy"/>
-                        <outletCollection property="buttons" destination="7r9-lu-Hn3" collectionClass="NSMutableArray" id="Jbf-k3-2cw"/>
-                        <outletCollection property="buttons" destination="QtA-Ao-ZAe" collectionClass="NSMutableArray" id="9Wd-Lx-GDr"/>
-                        <outletCollection property="buttons" destination="ybl-PW-UTe" collectionClass="NSMutableArray" id="erj-mc-4QD"/>
-                        <outletCollection property="buttons" destination="Igo-1J-qOL" collectionClass="NSMutableArray" id="FZL-La-chA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

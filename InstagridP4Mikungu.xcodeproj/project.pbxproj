@@ -24,7 +24,7 @@
 		DC2C2259287AFFEA00D441FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC2C225B287AFFEC00D441FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2C225E287AFFEC00D441FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC2C2260287AFFEC00D441FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2C2260287AFFEC00D441FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		DC2C226A287B522700D441FC /* CentralViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +58,7 @@
 		DC2C2251287AFFEA00D441FC /* InstagridP4Mikungu */ = {
 			isa = PBXGroup;
 			children = (
+				DC2C2260287AFFEC00D441FC /* Info.plist */,
 				DC2C2266287B02C000D441FC /* Model */,
 				DC2C2267287B02D600D441FC /* Controller */,
 				DC2C2268287B030600D441FC /* View */,
@@ -97,7 +98,6 @@
 				DC2C2254287AFFEA00D441FC /* SceneDelegate.swift */,
 				DC2C225B287AFFEC00D441FC /* Assets.xcassets */,
 				DC2C225D287AFFEC00D441FC /* LaunchScreen.storyboard */,
-				DC2C2260287AFFEC00D441FC /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

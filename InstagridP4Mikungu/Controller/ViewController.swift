@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ViewController: UIViewController {
 
     private var button: UIButton!
     private var swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(nextSwipeGesture(recognizer:)))
@@ -70,13 +70,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
     }
     
-    private func openGalery () {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .photoLibrary
-        self.present(imagePickerController, animated: true, completion: nil)
-    }
-    
     @objc func nextSwipeGesture (recognizer: UISwipeGestureRecognizer) {
         animationView()
         share()
@@ -106,7 +99,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         activityController.completionWithItemsHandler = { (_, _, _, _) in UIView.animate(withDuration: 0.3) { self.centralViewLayout.transform = .identity}
         }
     }
+}
+
+    extension ViewController:
+        UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            let image = info[UIImagePickerController.InfoKey.originalImage]
+            button.setImage(image as? UIImage, for: .normal)
+            button.subviews.first?.contentMode = .scaleAspectFill
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
+        private func openGalery () {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController, animated: true, completion: nil)
+        }
+    }
                                                 
     
-}
+
 
